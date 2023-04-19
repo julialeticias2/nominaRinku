@@ -44,4 +44,4 @@ if(('/Nomina/' === $uri || '/Nomina/index.php' === $uri) && isset($_POST['entrar
 } else {
     notfound_action();
 }
-
+?>
