@@ -1,0 +1,10 @@
+INSERT INTO CAT_ISR (ID_ISR, Rango, Porcentaje) VALUES (NULL, '0', '9');
+INSERT INTO CAT_ISR (ID_ISR, Rango, Porcentaje) VALUES (NULL, '10000', '12');
+INSERT INTO CAT_JORNADA (ID_JORNADA, horasXdia, diasXsemana) VALUES (NULL, '8', '6');
+INSERT INTO CAT_TIPOUSUARIO (ID_TIPO_USUARIO, tipoUsuario) VALUES (NULL, 'Administrador');
+INSERT INTO CAT_TIPOUSUARIO (ID_TIPO_USUARIO, tipoUsuario) VALUES (NULL, 'Responsable de Nomina');
+INSERT INTO Usuario (ID_USUARIO, correoElectronico, contrasenia, FK_ID_TIPO_USUARIO, estatus, usuarioAlta, fechaAlta, usuarioModificacion, fechaUltimaModificacion, usuarioBaja, fechaBaja) VALUES (NULL, 'juliasanchez15@gmail.com', '1234', '1', 'activo', '1', current_timestamp(), '0', current_timestamp(), '0', '2000-01-01 00:00:00.000000');
+INSERT INTO Usuario (ID_USUARIO, correoElectronico, contrasenia, FK_ID_TIPO_USUARIO, estatus, usuarioAlta, fechaAlta, usuarioModificacion, fechaUltimaModificacion, usuarioBaja, fechaBaja) VALUES (NULL, 'juliasanchez@rinku.jp', '5678', '2', 'activo', '1', current_timestamp(), '0', current_timestamp(), '0', '2000-01-01 00:00:00.000000');
+INSERT INTO Rol (ID_ROL, rol, FK_ID_JORNADA, pagoXhora, pagoXentrega, bonoXhora, estatus, usuarioAlta, fechaAlta, usuarioModificacion, fechaUltimaModificacion, usuarioBaja, fechaBaja) VALUES (NULL, 'Chofer', '1', '30', '5', '10', 'activo', '1', current_timestamp(), '0', current_timestamp(), '0', '2000-01-01 00:00:00.000000');
+INSERT INTO Rol (ID_ROL, rol, FK_ID_JORNADA, pagoXhora, pagoXentrega, bonoXhora, estatus, usuarioAlta, fechaAlta, usuarioModificacion, fechaUltimaModificacion, usuarioBaja, fechaBaja) VALUES (NULL, 'Cargador', '1', '30', '5', '5', 'activo', '1', current_timestamp(), '0', current_timestamp(), '0', '2000-01-01 00:00:00.000000');
+INSERT INTO Rol (ID_ROL, rol, FK_ID_JORNADA, pagoXhora, pagoXentrega, bonoXhora, estatus, usuarioAlta, fechaAlta, usuarioModificacion, fechaUltimaModificacion, usuarioBaja, fechaBaja) VALUES (NULL, 'Auxiliar', '1', '30', '5', '0', 'activo', '1', current_timestamp(), '0', current_timestamp(), '0', '2000-01-01 00:00:00.000000');
