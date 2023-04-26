@@ -40,3 +40,29 @@ function getDatosLogin($username){
     }
     return $datosLogin;
 }
+
+function getAllSalarios(){
+	$conexion= abrirBDconexion();
+    if($conexion != 'Error en la conexión de la base de datos'){
+		$salarios;
+		
+		cerrarBDconexion($conexion);
+	}
+	else{
+		$salarios=$conexion;
+	}
+	return $salarios;
+}
+
+function getAllEmpleados(){
+	$conexion= abrirBDconexion();
+    if($conexion != 'Error en la conexión de la base de datos'){
+		$empleados;
+		
+		cerrarBDconexion($conexion);
+	}
+	else{
+		$empleados=$conexion;
+	}
+	return $empleados;
+}

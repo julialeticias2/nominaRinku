@@ -12,7 +12,6 @@ function login_action(){
 }
 
 function login_form_action($username){
-	//$datosLogin=getDatosLogin($username);
     require 'front/login.php';
 }
 
@@ -39,25 +38,29 @@ function logout_action(){
 }
 
 function datosSalarios_action(){
-	
+	require 'front/datosSalarios.php';
 }
 
 function datosSalarios_form_action(){
-	
+	//Guardar información en la BD
+	require 'front/datosSalarios.php';
 }
 
 function datosEmpleados_action(){
-	
+	require 'front/datosEmpleados.php';
 }
 
 function datosEmpleados_form_action(){
-	
+	//Guardar información en la BD
+	require 'front/datosEmpleados.php';
 }
 
 function salariosList_action(){
-	
+	$salarios = getAllSalarios();
+	require 'front/salariosList.php';
 }
 
 function empleadosList_action(){
-	
+	$empleados = getAllEmpleados();
+	require 'front/empleadosList.php';
 }
