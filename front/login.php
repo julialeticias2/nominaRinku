@@ -22,12 +22,45 @@ $script = '<script>
 $bodyProperties = '';
 
 if(isset($_POST['entrar'])){
-    session_start();
+    /*if($datosLogin == 'Error en la conexión de la base de datos'){
+        echo '<p class="error">'.$datosLogin.'</p>';
+    }
+    else{
+        if (!$datosLogin) {
+            echo '<p class="error">¡El usuario y/o contraseña no son correctos!</p>';
+        } else {
+            $pepper = "6bMw5YkQ44xGMzFs8K7S2H2c";
+            $pwd_peppered = hash_hmac("sha512", $_POST['password'], $pepper);
+            if (password_verify($pwd_peppered, $datosLogin['contrasenia'])) {
+                //ini_set("session.use_only_cookies","1");
+                //ini_set("session.use_trans_sid","0");
+                //session_save_path('/home/sates/public_html/iprm/tmp');
+                session_start();
+                $_SESSION['uid'] = $datosLogin['ID'];
+                //$_SESSION["ultimoAcceso"]= date("Y-n-j H:i:s");
+                //echo '<p class="success">Congratulations, you are logged in! ID: '.$_SESSION['uid'].'</p>';
+                /*$host  = $_SERVER['HTTP_HOST'];
+                $uri2   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+                $extra = 'inicio';
+                header("Location: https://$host$uri2/$extra");*/
+                //header('Location: datosRetenedores/');
+                //-->header('Location: inicio/');
+                //echo 'https://'.$host.$uri2.'/'.$extra;
+                //header('Location: https://www.google.com/');
+                //-->exit;
+            /*} else {
+                echo '<p class="error">¡El usuario y/o contraseña no son correctos!</p>';
+            }
+        }
+    }*/
+	session_start();
     $_SESSION['uid'] = "1234";
 	header('Location: inicio/');
 	exit;
 }
-
+    /*$pwd_hash = password_hash("12345", PASSWORD_DEFAULT);
+    echo $pwd_hash.'\n';
+    echo password_verify("12345", $pwd_hash);*/
 ob_start();
 ?>
     <div class="container">

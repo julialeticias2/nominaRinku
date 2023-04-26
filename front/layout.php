@@ -6,6 +6,17 @@
  * Date: 16/04/2023
 -->
 
+<!--<script>
+function sheetLoaded() {
+  // Hacer algo interesante; la hoja de estilos ha sido cargada
+}
+
+function sheetError() {
+  alert("¡Ocurrió un error al cargar la hoja de estilos!");
+}
+</script>
+
+<link rel="stylesheet" href="mystylesheet.css" onload="sheetLoaded()" onerror="sheetError()"> -->
 <html lang="es-MX">
     <head>
         <base href="http://localhost/Nomina/">
@@ -20,5 +31,6 @@
     <body <?=$bodyProperties?>>
         <?=$content?>
     </body>
+    
  </html>
 

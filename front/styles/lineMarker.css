@@ -1,0 +1,335 @@
+/*
+Copyright © 2020 Codrops under the MIT License
+Reference: https://tympanus.net/codrops/2016/10/12/animated-decorative-lines/
+Edited by: Julia Leticia Sánchez Sánchez
+Date: 14/10/2020
+*/
+
+*, *::after, *::before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body {
+	font-family: 'Roboto Mono', monospace;
+	color: #666c7b;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: #f8f8f8;
+	font-weight: 400;
+	overflow: auto;
+}
+
+
+@-webkit-keyframes fadeAllIn {
+	0%, 50% { opacity: 0; -webkit-transform: translate3d(-10px,0,0); transform: translate3d(-10px,0,0); }
+	100% { opacity: 1; -webkit-transform: translate3d(0,0,0); transform: translate3d(0,0,0); }
+}
+
+@keyframes fadeAllIn {
+	0%, 50% { opacity: 0; -webkit-transform: translate3d(-10px,0,0); transform: translate3d(-10px,0,0); }
+	100% { opacity: 1; -webkit-transform: translate3d(0,0,0); transform: translate3d(0,0,0); }
+}
+
+/*a {
+	outline: none;
+	color: #eecc99;
+	text-decoration: none;
+}
+
+a:hover, a:focus { color: #666c7b; }*/
+
+/* Individual demo styles */
+.demo-2 {
+	background: #396ad1;
+	color: #fff;
+	/*height: 100%;
+	height: 100vh;*/
+}
+
+/*.demo-2 a {	color: #fff; }
+.demo-2 a:hover, .demo-2 a:focus { color: #fff; }*/
+
+/* Helpers */
+.hidden {
+	position: absolute;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+}
+
+/* Buttons */
+.btn {
+	background: #0B1D89;
+	color: inherit;
+        border: 0;
+	margin: 0;
+	/*display: block;*/
+	padding: 0.5em 1.15em;
+	border-radius: 0.3em;
+	margin: 1em 0 0;
+	font-size: 1em;
+	font-weight: bold;
+	text-transform: capitalize;
+	/*max-width: 100%;*/
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+        
+        
+}
+
+.btn[disabled] {
+	opacity: 0.8;
+}
+
+.btn:not([disabled]):hover {
+	background: #4856A7;
+	color: #fff;
+}
+
+.btn:focus {
+	outline: none;
+}
+
+/* Icons */
+/*.icon {
+	display: block;
+	width: 1.5em;
+	height: 1.5em;
+	margin: 0 auto;
+	fill: currentColor;
+}*/
+
+/* Header */
+/*.codrops-header {
+	margin: 12vh 0 0 10%;
+	padding: 2em;
+	position: relative;
+}*/
+
+.actions {
+	margin: 1em 0 0 0;
+	z-index: 100;
+	position: relative;
+}
+
+.demo-2 .codrops-header {
+	margin: calc(1vh + 1px) 0 0 calc(10% + 1px);
+	padding: 1em;
+	width: calc(75vw - 1px);
+	/*min-height: calc(40vh - 1px);*/
+	position: relative;
+	z-index: 100;
+	background: #0f27b7;
+}
+
+@-webkit-keyframes fadeIn {
+	0%, 40% { opacity: 0; }
+	85%, 100% { opacity: 1; -webkit-transform: translate3d(0,0,0); transform: translate3d(0,0,0); }
+}
+
+@keyframes fadeIn {
+	0%, 40% { opacity: 0; }
+	85%, 100% { opacity: 1; -webkit-transform: translate3d(0,0,0); transform: translate3d(0,0,0); }
+}
+
+.codrops-header__title {
+	margin: 0;
+	padding: 0 0 0.15em 0;
+	font-size: 9vw;
+	text-transform: uppercase;
+	line-height: 1;
+	font-weight: normal;
+}
+
+.demo-2 .codrops-header__title {
+	font-family: inherit;
+	color: #fff;
+	font-size: 3.5vw; /*6v*/
+	font-weight: 100;
+	/*margin-bottom: 5vh;*/
+}
+
+.demo-2 .sponsor {
+	font-weight: bold;
+	margin: 2em 0 0;
+	font-size: 0.85em;
+}
+
+.codrops-header__tagline {
+	padding: 0;
+	margin: 0;
+	font-weight: bold;
+	font-size: 1.25em;
+	line-height: 1.5;
+}
+
+.demo-2 .codrops-header__tagline {
+	font-size: 1em;
+}
+
+/* Top Navigation Style */
+.codrops-links {
+	display: inline-flex;
+	text-align: center;
+	white-space: nowrap;
+	margin: 1em;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.codrops-links::after {
+	position: absolute;
+	top: 0%;
+	left: 50%;
+	width: 1px;
+	height: 100%;
+	background: #ddd;
+	content: '';
+	-webkit-transform: rotate(22.5deg);
+	transform: rotate(22.5deg);
+}
+
+.codrops-icon {
+	display: block;
+	padding: 0.25em 1.5em 0.25em 0;
+}
+
+.codrops-icon:last-child {
+	padding-right: 0;
+}
+
+/* Demo links */
+.codrops-demos {
+	margin: 1em 0 0 0;
+}
+
+.codrops-demos a {
+	display: inline-block;
+	margin: 0 1em 0 0;
+	font-weight: bold;
+	font-size: 0.85em;
+}
+
+.codrops-demos a.current-demo {
+	color: #666c7b;
+}
+
+.demo-2 .codrops-demos a.current-demo {
+	color: #091452;
+}
+
+/* Content */
+.content {
+	padding: 3em 0;
+	position: relative;
+}
+
+.demo-2 .content {
+	padding: 10vw 0;
+}
+
+.demo-2 .content--grid p {
+	background: #fff;
+	font-weight: bold;
+	color: #0f27b7;
+	min-height: 10vw;
+	margin: 0 10vw;
+	padding: 2em;
+	line-height: 1.5;
+}
+
+/* Related demos */
+.content--related {
+	text-align: center;
+	font-weight: bold;
+	padding: 4em 0 15em;
+}
+
+.media-item {
+	display: inline-block;
+	padding: 1em;
+	vertical-align: top;
+	-webkit-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+.media-item__img {
+	max-width: 100%;
+	box-shadow: 0 15px 10px -10px rgba(0,0,0,0);
+	-webkit-transition: box-shadow 0.3s, -webkit-transform 0.3s;
+	transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.media-item:hover .media-item__img,
+.media-item:focus .media-item__img {
+	-webkit-transform: translate3d(0,-10px,0);
+	transform: translate3d(0,-10px,0);
+	box-shadow: 0 15px 10px -10px rgba(0,0,0,0.3);
+}
+
+.media-item__title {
+	margin: 0;
+	padding: 0.5em;
+	font-size: 1em;
+}
+
+.dummy {
+	width: 100%;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: space-between;
+	justify-content: space-between;
+	padding: 20px 20px 0 20px;
+	height: 15vh;
+}
+
+.dummy__icon {
+	width: calc(10vw - 20px);
+	color: #b0b0b1;
+}
+
+@media screen and (min-width: 50em) {
+	.actions {
+		width: 14.5vw;
+		margin: 2em 0 0 19vw;
+		position: absolute;
+	}
+	.content--grid p {
+		margin: 0 0 2em;
+		width: 20%;
+		margin-left: 10%;
+		text-align: right;
+		position: relative;
+	}
+	.content--grid p:nth-child(odd) {
+		margin-left: 50%;
+		text-align: left;
+	}
+	.content--grid p:nth-child(3n) {
+		margin-left: 70%;
+		text-align: left;
+	}
+	
+}
+
+@media screen and (max-width: 50em) {
+	.codrops-header {
+		padding: 1em;
+	}
+	.demo-2 .codrops-header {
+		margin-top: 3em;
+		width: calc(70vw - 1px);
+        }
+	.dummy {
+		padding: 10px 15% 0 15%;
+	}
+	.dummy__icon {
+		width: calc(10vw - 10px);
+	}
+}

@@ -7,7 +7,7 @@
  * Date: 17/07/2023
  */
  
-$title = 'Bienvenida al Sistema de Administración de la Nómina de Rinku';
+$title = 'Bienvenida del Sistema del IPRM';
 $style = '.menu-trigger:before {
 	 box-shadow: 0 6px #0406e6, 0 12px #fff, 0 18px #0406e6, 0 24px #fff;
          }';
@@ -16,8 +16,15 @@ $meta = '';
 $script = '';
 $bodyProperties = 'style="background: #0406e6;"';
 
+/*ini_set("session.use_only_cookies","1");
+ini_set("session.use_trans_sid","0");*/
+
+//session_save_path('/home/sates/public_html/iprm/tmp');
 session_start();
 
+//echo 'Hola usuario '.$_SESSION['uid'];   
+//echo "<br />\n";
+//print_r(session_get_cookie_params());
 if(!isset($_SESSION['uid'])){
     header('Location: index.php');
     exit;

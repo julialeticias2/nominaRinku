@@ -1,0 +1,32 @@
+.filterable {
+    margin-top: 15px;
+}
+.filterable .panel-heading .pull-right {
+    margin-top: -20px;
+}
+.filterable .filters input[disabled] {
+    background-color: transparent;
+    border: none;
+    cursor: auto;
+    box-shadow: none;
+    padding: 0;
+    height: auto;
+}
+.filterable .filters input[disabled]::-webkit-input-placeholder {
+    color: #333;
+}
+.filterable .filters input[disabled]::-moz-placeholder {
+    color: #333;
+}
+.filterable .filters input[disabled]:-ms-input-placeholder {
+    color: #333;
+}
+.table-bodycat tr:nth-child(odd) {
+  background-color: #F9EAF9;
+}
+.table-bodyp tr:nth-child(odd) {
+  background-color: #F7ECE2;
+}
+.table-body tr:nth-child(odd) {
+  background-color: #EAF3F3;
+}

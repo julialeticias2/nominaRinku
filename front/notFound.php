@@ -22,7 +22,11 @@
         <span>4</span>
     </section>
     <div class="link-container">
+        <!-- a href="/index.php" class="more-link">Ir al Inicio</a-->
         <a href="javascript:history.back()" class="more-link">Regresar a la página anterior</a>
+        <!--script>
+            document.write('<a href="' + document.referrer + '" class="more-link">Regresar a la página anterior</a>');
+        </script-->
     </div>
 <?php $content = ob_get_clean() ?>
 

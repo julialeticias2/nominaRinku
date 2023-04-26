@@ -1,0 +1,25 @@
+/*
+Copyright © 2020 Codrops under the MIT License
+Reference: https://tympanus.net/codrops/2016/10/12/animated-decorative-lines/
+Date added: 14/10/2020
+*/
+
+.decolines {
+	pointer-events: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+}
+
+.decolines--fixed {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+}
+
+.decoline {
+	position: absolute;
+}

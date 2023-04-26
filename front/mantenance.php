@@ -1,20 +1,21 @@
 <!--front/mantenance.php-->
 
 <!--
- * Copyright (c) 2023, All rights reserved. Todos los derechos reservados.
- * Author: Ing. Julia Leticia Sánchez Sánchez
- * Date: 17/04/2023
+* Copyright (c) 2020, Dirección de Atención y Enlace del SATES (Servicio de Administración Tributaria del Estado de Sinaloa)
+* All rights reserved.
+* Author: Ing. Julia Leticia Sánchez Sánchez
+* Date: 25/11/2020
 -->
 
-<?php $title = 'Ejercicio Técnico Coppel'?>
+<?php $title = 'Sistema del IPRM en Mantenimiento'?>
 <?php $style = ''?>
 <?php $link = '<link rel="shortcut icon" href="favicon.ico">
                <link rel="stylesheet" type="text/css" href="front/styles/mantenance.css"/>'?>
 <?php $meta = '<meta charset="UTF-8" />
                <meta name="viewport" content="width=device-width, initial-scale=1">
-               <meta name="description" content="Página de aviso de mantenimiento del Sitio Web de la nómina de Rinku. Referencia: Infinite WebGL tubes as seen on Fornasetti.com made with Three.js" />
+               <meta name="description" content="Página de aviso de mantenimiento del Sitio Web del IPRM. Referencia: Infinite WebGL tubes as seen on Fornasetti.com made with Three.js" />
                <meta name="keywords" content="mantenimiento, mantenance" />
-               <meta name="author" content="Louis Hoebregts for Codrops. Edited by Ing. Julia Leticia Sánchez Sánchez" />'?>
+               <meta name="author" content="Louis Hoebregts for Codrops. Edited by Julia Leticia Sánchez Sánchez" />'?>
 <?php $script = '<script>document.documentElement.className = "js";</script>'?>
 <?php $bodyProperties = ''?>
 
@@ -34,7 +35,7 @@
         <header class="codrops-header">
             <h1 class="codrops-header__title" style="font-size:300%; text-align:center;">Página en mantenimiento</h1>
             <p class="codrops-header__tagline"><br>Diseño del tunel proporcionado por: <a href="https://tympanus.net/codrops/2017/05/09/infinite-tubes-with-three-js/">Timpanus.Net</a> Inspirado en el efecto visto en <a href="http://www.fornasetti.com/">Fornasetti</a></p>
-            <p class="codrops-header__info">Si necesita alguna información, envíe un mensaje al correo juliasanchez15@gmail.com</p>
+            <p class="codrops-header__info">Si necesita alguna información, envíe un mensaje al correo julia.sanchez@sates.gob.mx</p>
 	</header>
 	<div class="content">
             <!-- The canvas where ThreeJs renders the WebGL -->
