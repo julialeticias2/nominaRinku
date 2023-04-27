@@ -16,15 +16,6 @@ $meta = '';
 $script = '';
 $bodyProperties = 'style="background: #0406e6;"';
 
-/*ini_set("session.use_only_cookies","1");
-ini_set("session.use_trans_sid","0");*/
-
-//session_save_path('/home/sates/public_html/iprm/tmp');
-session_start();
-
-//echo 'Hola usuario '.$_SESSION['uid'];   
-//echo "<br />\n";
-//print_r(session_get_cookie_params());
 if(!isset($_SESSION['uid'])){
     header('Location: index.php');
     exit;
