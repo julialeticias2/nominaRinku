@@ -7,7 +7,7 @@
  * Date: 17/07/2023
  */
  
-$title = 'Bienvenida del Sistema del IPRM';
+$title = 'Bienvenida del sistema de la Nómina de Rinku';
 $style = '.menu-trigger:before {
 	 box-shadow: 0 6px #0406e6, 0 12px #fff, 0 18px #0406e6, 0 24px #fff;
          }';
