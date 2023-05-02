@@ -90,11 +90,12 @@ Date: 15/10/2020
 
 .cbp-mc-submit-wrap {
 	text-align: center;
-	padding-top: 40px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	clear: both;
 }
 
-.cbp-mc-form input.cbp-mc-submit {
+.cbp-mc-submit {
 	background: #2B3DA9; /*#10689a*/
 	border: none;
 	color: #fff;
@@ -108,7 +109,7 @@ Date: 15/10/2020
 	letter-spacing: 1px;
 }
 
-.cbp-mc-form input.cbp-mc-submit:hover {
+.cbp-mc-submit:hover {
 	background: #0B1C7F; /*#1478b1*/
 }
 

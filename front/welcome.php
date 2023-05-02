@@ -6,22 +6,24 @@
  * Author: Ing. Julia Leticia Sánchez Sánchez
  * Date: 17/07/2023
  */
- 
-$title = 'Bienvenida del sistema de la Nómina de Rinku';
-$style = '.menu-trigger:before {
-	 box-shadow: 0 6px #0406e6, 0 12px #fff, 0 18px #0406e6, 0 24px #fff;
-         }';
-$link = '<link rel="stylesheet" type="text/css" href="front/styles/base.css">';
-$meta = '';
-$script = '';
-$bodyProperties = 'style="background: #0406e6;"';
+
+session_start();
 
 if(!isset($_SESSION['uid'])){
     header('Location: index.php');
     exit;
 } else {
 
-ob_start();
+	$title = 'Bienvenida del Sistema la Nómina de Rinku';
+	$style = '.menu-trigger:before {
+				box-shadow: 0 6px #0406e6, 0 12px #fff, 0 18px #0406e6, 0 24px #fff;
+			  }';
+	$link = '<link rel="stylesheet" type="text/css" href="front/styles/base.css">';
+	$meta = '';
+	$script = '';
+	$bodyProperties = 'style="background: #0406e6;"';
+
+	ob_start();
 ?>
 
 <div class="content">
@@ -112,5 +114,6 @@ ob_start();
 </div>
 
 <?php $scrollContent = ob_get_clean();
-      include 'menu.php'; } ?>
+	  include 'menu.php';
+} ?>
 

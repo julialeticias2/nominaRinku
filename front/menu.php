@@ -56,6 +56,5 @@ ob_start();
     <script>
         new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ) );
     </script>
-    <?//=$scriptsExtend?>
 <?php $content = ob_get_clean();
 include 'layout.php'; ?>

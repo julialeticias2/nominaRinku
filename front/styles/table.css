@@ -21,11 +21,11 @@
 .filterable .filters input[disabled]:-ms-input-placeholder {
     color: #333;
 }
-.table-bodycat tr:nth-child(odd) {
-  background-color: #F9EAF9;
+.table-bodysal tr:nth-child(odd) {
+  background-color: #F2E0D0;
 }
-.table-bodyp tr:nth-child(odd) {
-  background-color: #F7ECE2;
+.table-bodyempl tr:nth-child(odd) {
+  background-color: #CBF0CC;
 }
 .table-body tr:nth-child(odd) {
   background-color: #EAF3F3;

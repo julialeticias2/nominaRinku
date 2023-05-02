@@ -29,19 +29,19 @@ if(('/Nomina/' === $uri || '/Nomina/index.php' === $uri) && isset($_POST['entrar
     inicio_action();
 } elseif ('/Nomina/logout/' === $uri || '/Nomina/logout' === $uri){
     logout_action();
+} elseif(('/Nomina/datosSalarios/' === $uri || '/Nomina/datosSalarios' === $uri) && isset($_POST['enviar'])){
+    datosSalarios_form_action();
 } elseif('/Nomina/datosSalarios/' === $uri || '/Nomina/datosSalarios' === $uri){
     datosSalarios_action();
-} elseif(('/Nomina/datosSalarios/' === $uri || '/Nomina/datosSalarios' === $uri) && isset($_POST['guardar'])){
-    datosSalarios_form_action();
+} elseif(('/Nomina/datosEmpleados/' === $uri || '/Nomina/datosEmpleados' === $uri) && isset($_POST['guardar'])){
+    datosEmpleados_form_action();
 } elseif('/Nomina/datosEmpleados/' === $uri || '/Nomina/datosEmpleados' === $uri){
     datosEmpleados_action();
-} elseif(('/Nomina/datosEmpleados/' === $uri || '/Nomina/datosEmpleados' === $uri) && isset($_POST['enviar'])){
-    datosEmpleados_form_action();
-} elseif('/Nomina/salariosConsulta/' === $uri || '/Nomina/salariosConsulta' === $uri){
+}  elseif('/Nomina/salariosConsulta/' === $uri || '/Nomina/salariosConsulta' === $uri){
     salariosList_action();
 } elseif('/Nomina/empleadosConsulta/' === $uri || '/Nomina/empleadosConsulta' === $uri){
     empleadosList_action();
 } else {
     notfound_action();
 }
-?>
+

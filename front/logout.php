@@ -1,14 +1,10 @@
 <?php
-/* 
- * Copyright (c) 2021, Dirección de Atención y Enlace del SATES (Servicio de Administración Tributaria del Estado de Sinaloa)
+/*
+ * Copyright © 2023 All rights reserved. Todos los derechos reservados.
  * All rights reserved.
  * Author: Ing. Julia Leticia Sánchez Sánchez
- * Date: 29/01/2021
- */
-
-/*setcookie(session_name(), session_id(), 1);
-$_SESSION = array();
-session_destroy();*/
+ * Date: 16/04/2023
+*/
 
 session_start();
 $_SESSION = array();

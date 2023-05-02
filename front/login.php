@@ -22,14 +22,27 @@ $script = '<script>
 $bodyProperties = '';
 
 if(isset($_POST['entrar'])){
-	session_start();
-	$_SESSION['uid'] = "1234";
-	header('Location: inicio/');
-	exit;
+    if($datosLogin == 'Error en la conexión de la base de datos'){
+        echo '<p class="error">'.$datosLogin.'</p>';
+    }
+    else{
+        if (!$datosLogin) {
+            echo '<p class="error">¡El usuario y/o contraseña no son correctos!</p>';
+        } else {
+            $pepper = "6bMw5YkQ44xGMzFs8K7S2H2c";
+            $pwd_peppered = hash_hmac("sha512", $_POST['password'], $pepper);
+            if (password_verify($pwd_peppered, $datosLogin['contrasenia'])) {
+                session_start();
+                $_SESSION['uid'] = $datosLogin['ID'];
+                header('Location: inicio/');
+                exit;
+            } else {
+                echo '<p class="error">¡El usuario y/o contraseña no son correctos!</p>';
+            }
+        }
+    }
 }
-    /*$pwd_hash = password_hash("12345", PASSWORD_DEFAULT);
-    echo $pwd_hash.'\n';
-    echo password_verify("12345", $pwd_hash);*/
+
 ob_start();
 ?>
     <div class="container">
@@ -43,11 +56,11 @@ ob_start();
                     <li>
                         <p>
                             <label for="email">Usuario (email)<span class="req">*</span></label>
-                            <input type="email" name="email" placeholder="su_correo@dominio.del.correo" title="Ingrese su correo electrónico" /><!--required--><!--oninvalid="this.setCustomValidity('El correo electrónico ingresado no es válido')"-->
+                            <input type="email" name="email" placeholder="su_correo@dominio.del.correo" title="Ingrese su correo electrónico" required/><!--oninvalid="this.setCustomValidity('El correo electrónico ingresado no es válido')"-->
                         </p>
                         <p>
                             <label for="password">Contraseña <span class="req">*</span></label>
-                            <input type="password" name="password" placeholder="contraseña_asignada" title="Ingrese la contraseña asignada" /><!--required-->
+                            <input type="password" name="password" placeholder="contraseña_asignada" title="Ingrese la contraseña asignada" required/>
                         </p>
                     </li>        
                     <li>
